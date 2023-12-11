@@ -1,4 +1,4 @@
-# reproduce problem
+# jar build by maven-shade-plugin fails
 ```shell
 mvn clean install
 java -jar target/executable-demo-1.0.0-SNAPSHOT-jar-with-dependencies.jar 
@@ -31,3 +31,8 @@ Exception in thread "main" java.util.MissingResourceException: The string resour
         at io.sapl.demo.Main.main(Main.java:11)
 ```
 
+# jar build by maven-shade-plugin okay
+Exclude plugin.properties from eclipse dependencies and replace with manual file containing _UI_DiagnosticRoot_diagnostic
+```shell
+java -jar target/executable-demo-1.0.0-SNAPSHOT.jar 
+```
