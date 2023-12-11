@@ -1,0 +1,5 @@
+policy "simple_policy"
+permit
+    action == "eat"
+where
+    resource == "apple";
